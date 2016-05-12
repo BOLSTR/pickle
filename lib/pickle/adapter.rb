@@ -1,4 +1,5 @@
 require 'active_support/core_ext'
+require 'railties/lib/rails'
 
 module Pickle
   # Abstract Factory adapter class, if you have a factory type setup, you
