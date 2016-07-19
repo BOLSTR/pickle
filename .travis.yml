@@ -1,9 +1,14 @@
 language: ruby
+cache: bundler
 rvm:
   - 2.3.1
   - 2.2.5
   - 2.1.10
   - 2.0.0
+matrix:
+  allow_failures:
+    - rvm: 2.3.1
+  fast_finish: true
 
 before_install:
   - cp Gemfile.lock.development Gemfile.lock
