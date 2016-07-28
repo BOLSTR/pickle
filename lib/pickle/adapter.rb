@@ -144,12 +144,13 @@ module Pickle
     # fabrication adapter
     class Fabrication < Adapter
       def self.factories
-        if defined? ::Fabrication
-          ::Fabrication.manager.load_definitions if ::Fabrication.manager.schematics.empty?
-          ::Fabrication.manager.schematics.map { |name, klass| new([name, klass]) }
-        else
-          []
-        end
+#         if defined? ::Fabrication
+#           ::Fabrication.manager.load_definitions if ::Fabrication.manager.schematics.empty?
+#           ::Fabrication.manager.schematics.map { |name, klass| new([name, klass]) }
+#         else
+#           []
+#         end
+        []
       end
 
       def initialize(factory)

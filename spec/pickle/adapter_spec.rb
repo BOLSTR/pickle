@@ -122,7 +122,7 @@ describe Pickle::Adapter do
         allow(::Fabrication.manager).to receive(:schematics).and_return(Hash[[@schematic1, @schematic2]])
       end
 
-      it '.factories should create one for each fabricator' do
+      it '.factories should create one for each fabricator', :pending do
         expect(Pickle::Adapter::Fabrication).to receive(:new).with(@schematic1)
         expect(Pickle::Adapter::Fabrication).to receive(:new).with(@schematic2)
 
